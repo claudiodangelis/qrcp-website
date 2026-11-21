@@ -3,6 +3,8 @@ layout: default
 title: Secure transfers with mkcert
 tutorial: true
 date: 2020-10-14
+redirect_from:
+  - /tutorials/secure-transfers-with-mkcert.html
 summary: Create a local Certificate Authority with mkcert and transfer files over HTTPS.
 # youtube: VIDEO_ID   # optional: embed a video with {% include youtube.html id=page.youtube %}
 ---

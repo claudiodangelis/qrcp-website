@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<p><a href="{{ '/releases/' | relative_url }}">&larr; All releases</a></p>
+
+<h1>{{ page.title }}</h1>
+<p class="meta">
+  Released on {{ page.date | date: "%B %-d, %Y" }}
+  {% if page.prerelease %} · <strong>pre-release</strong>{% endif %}
+  · <a href="{{ page.release_url }}" data-goatcounter-click="ext-release-{{ page.version }}">View on GitHub</a>
+</p>
+
+{{ content }}

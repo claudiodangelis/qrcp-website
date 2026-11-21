@@ -1,0 +1,20 @@
+{% comment %}
+GoatCounter (cookieless, no consent banner needed).
+- Rendered only in production builds (GitHub Pages sets JEKYLL_ENV=production) and when `goatcounter` is set in _config.yml.
+- Counts only on the real domain (site.url host), so the github.io staging URL doesn't pollute stats.
+- count.js already ignores localhost and private networks.
+- Pinned to count.v5.js with SRI; to upgrade, take the new tag from https://www.goatcounter.com/help/countjs-versions
+- Click events: add data-goatcounter-click="name" to any link/button.
+{% endcomment %}
+{% if jekyll.environment == "production" and site.goatcounter != "" %}
+{% assign gc_host = site.url | remove: "https://" | remove: "http://" %}
+<script>
+  if (window.location.host !== "{{ gc_host }}") {
+    window.goatcounter = { no_onload: true, no_events: true };
+  }
+</script>
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.v5.js"
+        crossorigin="anonymous"
+        integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ"></script>
+{% endif %}

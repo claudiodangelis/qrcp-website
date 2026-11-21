@@ -1,0 +1,49 @@
+title: qrcp
+description: Transfer files over wifi from your computer to your mobile device by scanning a QR code without leaving the terminal.
+url: https://qrcp.sh
+baseurl: ""
+theme: jekyll-theme-primer
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# GoatCounter site code (the "xxx" in xxx.goatcounter.com). Empty = disabled.
+goatcounter: "qrcp"
+
+github_repo: https://github.com/claudiodangelis/qrcp
+
+nav:
+  - title: Home
+    url: /
+  - title: Docs
+    url: /docs/
+  - title: Packages
+    url: /packages/
+  - title: Releases
+    url: /releases/
+  - title: Tutorials
+    url: /tutorials/
+
+permalink: /:categories/:title/
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: release
+      category: releases
+      excerpt_separator: "<!--more-->"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - serve.sh
+  - scripts/
+  - README.md
+  - vendor/

@@ -1,0 +1,46 @@
+# Rendered by packages.md. One entry per installation method.
+# Use VERSION in a command for version-specific file names.
+- platform: macOS
+  name: Homebrew
+  command: brew install qrcp
+  url: https://formulae.brew.sh/formula/qrcp
+
+- platform: Linux
+  name: Arch Linux (AUR, binary)
+  command: yay -S qrcp-bin
+  url: https://aur.archlinux.org/packages/qrcp-bin
+
+- platform: Linux
+  name: Arch Linux (AUR, from source)
+  command: yay -S qrcp
+  url: https://aur.archlinux.org/packages/qrcp
+
+- platform: Linux
+  name: Debian / Ubuntu (.deb)
+  command: sudo dpkg -i qrcp_VERSION_linux_amd64.deb
+  url: https://github.com/claudiodangelis/qrcp/releases/latest
+
+- platform: Linux
+  name: Fedora / CentOS (.rpm)
+  command: sudo rpm -i qrcp_VERSION_linux_amd64.rpm
+  url: https://github.com/claudiodangelis/qrcp/releases/latest
+
+- platform: Windows
+  name: WinGet
+  command: winget install --id=claudiodangelis.qrcp -e
+  url: https://winstall.app/apps/claudiodangelis.qrcp
+
+- platform: Windows
+  name: Scoop
+  command: scoop install qrcp
+  url: https://scoop.sh/#/apps?q=qrcp
+
+- platform: Windows
+  name: Chocolatey
+  command: choco install qrcp
+  url: https://community.chocolatey.org/packages/qrcp
+
+- platform: Any
+  name: Go (latest development version, Go 1.18+)
+  command: go install github.com/claudiodangelis/qrcp@latest
+  url: https://pkg.go.dev/github.com/claudiodangelis/qrcp

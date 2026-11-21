@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/img/logo.svg' | relative_url }}">
+    {% feed_meta %}
+    {% seo %}
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container-lg px-3 site-header-inner">
+        <a class="site-brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/img/logo.svg' | relative_url }}" alt="" width="28" height="28">
+          <span>{{ site.title }}</span>
+        </a>
+
+        <nav class="site-nav">
+          {% for item in site.nav %}
+            {% unless item.url == '/' %}
+              {% assign active = false %}
+              {% if page.url contains item.url %}{% assign active = true %}{% endif %}
+              <a href="{{ item.url | relative_url }}"{% if active %} class="active"{% endif %}>{{ item.title }}</a>
+            {% endunless %}
+          {% endfor %}
+          <a class="site-nav-github" href="{{ site.github_repo }}" data-goatcounter-click="ext-github-nav">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container-lg px-3 my-5 markdown-body">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container-lg px-3">
+        qrcp is free and open-source software, released under the
+        <a href="{{ site.github_repo }}/blob/main/LICENSE">MIT license</a>.
+        <a href="{{ site.github_repo }}" data-goatcounter-click="ext-github-footer">Source code</a> ·
+        <a href="{{ site.github_repo }}/issues">Issues</a> ·
+        <a href="{{ '/feed.xml' | relative_url }}" data-goatcounter-click="rss-footer">RSS</a> ·
+        <a href="https://t.me/qrcp_dev">Telegram</a>
+      </div>
+    </footer>
+
+    {% include analytics.html %}
+  </body>
+</html>

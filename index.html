@@ -1,0 +1,117 @@
+---
+layout: default
+title: qrcp — transfer files over Wi-Fi with a QR code
+---
+{% assign latest = site.categories.releases | where_exp: "r", "r.prerelease != true" | first %}
+
+<section class="hero">
+  <img class="hero-logo" src="{{ '/img/logo.svg' | relative_url }}" alt="qrcp logo">
+  <p class="hero-tagline">qrcp: Transfer files over wifi from your computer to your mobile device by scanning a QR code without leaving the terminal.</p>
+  <p class="hero-sub"><span class="oss-badge">Free &amp; open source · MIT</span><br>No app on the phone, no cloud, no accounts.</p>
+
+  <pre class="hero-term" aria-label="Example qrcp output with a QR code"><span class="prompt">$</span> qrcp holiday-photos.zip
+<span class="dim">Scan the following URL with a QR reader to start the file transfer, press CTRL+C or "q" to exit:</span>
+<span class="dim">http://192.168.1.12:41237/send/xkcd</span>
+<svg class="qr" viewBox="0 0 37 37" width="222" height="222" shape-rendering="crispEdges" role="img" aria-label="QR code for http://192.168.1.12:41237/send/xkcd"><path fill="#e6edf3" d="M0 0h37v1h-37zM0 1h37v1h-37zM0 2h37v1h-37zM0 3h37v1h-37zM0 4h4v1h-4zM11 4h1v1h-1zM13 4h3v1h-3zM20 4h3v1h-3zM24 4h2v1h-2zM33 4h4v1h-4zM0 5h4v1h-4zM5 5h5v1h-5zM11 5h1v1h-1zM14 5h1v1h-1zM18 5h2v1h-2zM21 5h5v1h-5zM27 5h5v1h-5zM33 5h4v1h-4zM0 6h4v1h-4zM5 6h1v1h-1zM9 6h1v1h-1zM11 6h2v1h-2zM15 6h5v1h-5zM21 6h5v1h-5zM27 6h1v1h-1zM31 6h1v1h-1zM33 6h4v1h-4zM0 7h4v1h-4zM5 7h1v1h-1zM9 7h1v1h-1zM11 7h1v1h-1zM13 7h2v1h-2zM16 7h2v1h-2zM20 7h2v1h-2zM24 7h2v1h-2zM27 7h1v1h-1zM31 7h1v1h-1zM33 7h4v1h-4zM0 8h4v1h-4zM5 8h1v1h-1zM9 8h1v1h-1zM11 8h3v1h-3zM15 8h1v1h-1zM17 8h1v1h-1zM19 8h1v1h-1zM22 8h4v1h-4zM27 8h1v1h-1zM31 8h1v1h-1zM33 8h4v1h-4zM0 9h4v1h-4zM5 9h5v1h-5zM11 9h2v1h-2zM14 9h3v1h-3zM18 9h1v1h-1zM21 9h1v1h-1zM25 9h1v1h-1zM27 9h5v1h-5zM33 9h4v1h-4zM0 10h4v1h-4zM11 10h1v1h-1zM13 10h1v1h-1zM15 10h1v1h-1zM17 10h1v1h-1zM19 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM25 10h1v1h-1zM33 10h4v1h-4zM0 11h12v1h-12zM14 11h2v1h-2zM17 11h2v1h-2zM21 11h2v1h-2zM24 11h13v1h-13zM0 12h4v1h-4zM5 12h1v1h-1zM8 12h1v1h-1zM12 12h2v1h-2zM15 12h1v1h-1zM18 12h1v1h-1zM22 12h1v1h-1zM25 12h1v1h-1zM27 12h2v1h-2zM30 12h1v1h-1zM33 12h4v1h-4zM0 13h4v1h-4zM5 13h2v1h-2zM8 13h1v1h-1zM10 13h1v1h-1zM13 13h1v1h-1zM16 13h1v1h-1zM20 13h1v1h-1zM22 13h3v1h-3zM29 13h3v1h-3zM33 13h4v1h-4zM0 14h4v1h-4zM5 14h3v1h-3zM9 14h1v1h-1zM11 14h1v1h-1zM13 14h2v1h-2zM18 14h3v1h-3zM22 14h2v1h-2zM25 14h3v1h-3zM29 14h1v1h-1zM32 14h5v1h-5zM0 15h4v1h-4zM6 15h1v1h-1zM10 15h2v1h-2zM13 15h2v1h-2zM17 15h3v1h-3zM23 15h2v1h-2zM26 15h1v1h-1zM28 15h1v1h-1zM30 15h2v1h-2zM33 15h4v1h-4zM0 16h5v1h-5zM6 16h2v1h-2zM17 16h1v1h-1zM20 16h1v1h-1zM24 16h1v1h-1zM26 16h2v1h-2zM31 16h6v1h-6zM0 17h6v1h-6zM8 17h1v1h-1zM10 17h1v1h-1zM14 17h1v1h-1zM17 17h1v1h-1zM19 17h2v1h-2zM24 17h2v1h-2zM29 17h2v1h-2zM33 17h4v1h-4zM0 18h9v1h-9zM11 18h4v1h-4zM18 18h2v1h-2zM22 18h1v1h-1zM25 18h1v1h-1zM27 18h2v1h-2zM33 18h4v1h-4zM0 19h6v1h-6zM9 19h4v1h-4zM16 19h2v1h-2zM19 19h2v1h-2zM23 19h2v1h-2zM27 19h1v1h-1zM29 19h2v1h-2zM32 19h5v1h-5zM0 20h4v1h-4zM5 20h3v1h-3zM11 20h1v1h-1zM13 20h1v1h-1zM17 20h1v1h-1zM19 20h1v1h-1zM21 20h3v1h-3zM29 20h2v1h-2zM32 20h5v1h-5zM0 21h8v1h-8zM9 21h2v1h-2zM12 21h1v1h-1zM14 21h1v1h-1zM17 21h1v1h-1zM21 21h1v1h-1zM23 21h1v1h-1zM27 21h3v1h-3zM32 21h5v1h-5zM0 22h4v1h-4zM5 22h1v1h-1zM7 22h2v1h-2zM13 22h2v1h-2zM19 22h1v1h-1zM22 22h4v1h-4zM27 22h1v1h-1zM31 22h6v1h-6zM0 23h7v1h-7zM10 23h2v1h-2zM14 23h3v1h-3zM19 23h2v1h-2zM23 23h1v1h-1zM26 23h1v1h-1zM28 23h2v1h-2zM31 23h6v1h-6zM0 24h5v1h-5zM6 24h1v1h-1zM9 24h1v1h-1zM12 24h2v1h-2zM15 24h2v1h-2zM19 24h2v1h-2zM22 24h2v1h-2zM31 24h6v1h-6zM0 25h12v1h-12zM13 25h1v1h-1zM15 25h9v1h-9zM25 25h3v1h-3zM33 25h4v1h-4zM0 26h4v1h-4zM11 26h1v1h-1zM14 26h4v1h-4zM21 26h3v1h-3zM25 26h1v1h-1zM27 26h1v1h-1zM30 26h1v1h-1zM32 26h5v1h-5zM0 27h4v1h-4zM5 27h5v1h-5zM11 27h1v1h-1zM13 27h4v1h-4zM19 27h4v1h-4zM25 27h3v1h-3zM30 27h1v1h-1zM32 27h5v1h-5zM0 28h4v1h-4zM5 28h1v1h-1zM9 28h1v1h-1zM11 28h3v1h-3zM17 28h2v1h-2zM21 28h1v1h-1zM30 28h7v1h-7zM0 29h4v1h-4zM5 29h1v1h-1zM9 29h1v1h-1zM11 29h1v1h-1zM13 29h1v1h-1zM15 29h2v1h-2zM18 29h1v1h-1zM20 29h1v1h-1zM25 29h1v1h-1zM28 29h2v1h-2zM31 29h6v1h-6zM0 30h4v1h-4zM5 30h1v1h-1zM9 30h1v1h-1zM11 30h1v1h-1zM13 30h1v1h-1zM16 30h4v1h-4zM24 30h2v1h-2zM30 30h2v1h-2zM33 30h4v1h-4zM0 31h4v1h-4zM5 31h5v1h-5zM11 31h5v1h-5zM17 31h1v1h-1zM22 31h1v1h-1zM25 31h1v1h-1zM27 31h1v1h-1zM29 31h2v1h-2zM32 31h5v1h-5zM0 32h4v1h-4zM11 32h1v1h-1zM14 32h2v1h-2zM21 32h4v1h-4zM27 32h1v1h-1zM29 32h1v1h-1zM32 32h5v1h-5zM0 33h37v1h-37zM0 34h37v1h-37zM0 35h37v1h-37zM0 36h37v1h-37z"/></svg></pre>
+
+  <div class="cta">
+    <a class="btn btn-primary" href="#install" data-goatcounter-click="cta-install">Install</a>
+    <a class="btn" href="{{ '/docs/' | relative_url }}" data-goatcounter-click="cta-docs">Read the docs</a>
+    <a class="btn" href="{{ site.github_repo }}" data-goatcounter-click="cta-source">&#9733; Star on GitHub</a>
+    {% if latest %}<a class="btn" href="{{ latest.url | relative_url }}" data-goatcounter-click="cta-latest-release">What's new in {{ latest.title }}</a>{% endif %}
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h3>No app needed</h3>
+    <p>Any phone camera or QR reader works. The transfer happens in the mobile browser.</p>
+  </div>
+  <div class="feature">
+    <h3>Both directions</h3>
+    <p><code>qrcp file</code> sends to the phone, <code>qrcp receive</code> serves an upload page and saves what you pick.</p>
+  </div>
+  <div class="feature">
+    <h3>Stays on your network</h3>
+    <p>Files go straight over your local Wi-Fi. Nothing is uploaded anywhere, and the URL is random and one-shot.</p>
+  </div>
+  <div class="feature">
+    <h3>Folders &amp; many files</h3>
+    <p>Send whole directories or several files at once; they're zipped on the fly.</p>
+  </div>
+  <div class="feature">
+    <h3>HTTPS when you want it</h3>
+    <p>Bring your own certificate for encrypted transfers. <a href="{{ '/tutorials/secure-transfers-with-mkcert/' | relative_url }}">See how</a>.</p>
+  </div>
+  <div class="feature">
+    <h3>Runs everywhere</h3>
+    <p>A single binary for Linux, macOS and Windows, on Intel and ARM.</p>
+  </div>
+</section>
+
+<section class="oss-band">
+  <h2>Free and open source, for good</h2>
+  <p>qrcp is open-source software released under the <a href="{{ site.github_repo }}/blob/main/LICENSE">MIT license</a>. No ads, no paid tier: the code is all on GitHub for you to read, audit, fork and improve.</p>
+  <ul class="oss-stats">
+    <li><strong>10k+</strong> stars on GitHub</li>
+    <li><strong>50+</strong> contributors</li>
+    <li>developed in the open <strong>since 2018</strong></li>
+  </ul>
+</section>
+
+<section class="how">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><span class="step-n">1</span><strong>Run qrcp</strong><br>It starts a tiny web server on your Wi-Fi address and prints a QR code.</li>
+    <li><span class="step-n">2</span><strong>Scan it</strong><br>Point your phone's camera at the terminal and open the link.</li>
+    <li><span class="step-n">3</span><strong>Done</strong><br>The file downloads (or uploads) and qrcp exits on its own.</li>
+  </ol>
+</section>
+
+<section class="demos">
+  <figure>
+    <img src="{{ '/img/demo.gif' | relative_url }}" alt="Sending a file to a phone" loading="lazy">
+    <figcaption>Send to your phone</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/img/mobile-demo.gif' | relative_url }}" alt="Receiving files from a phone" loading="lazy">
+    <figcaption>Receive from your phone</figcaption>
+  </figure>
+</section>
+
+<section id="install" class="install">
+  <h2>Install</h2>
+  <div class="install-grid">
+    <div><h4>macOS</h4><pre>brew install qrcp</pre></div>
+    <div><h4>Linux (Arch)</h4><pre>yay -S qrcp-bin</pre></div>
+    <div><h4>Windows</h4><pre>winget install --id=claudiodangelis.qrcp -e</pre></div>
+    <div><h4>Go</h4><pre>go install github.com/claudiodangelis/qrcp@latest</pre></div>
+  </div>
+  <p>Debian, Fedora, Scoop, Chocolatey and prebuilt binaries: <a href="{{ '/packages/' | relative_url }}" data-goatcounter-click="home-all-packages">all packages &rarr;</a></p>
+</section>
+
+{% if latest %}
+<section class="latest">
+  <h2>Latest release</h2>
+  <p>
+    <a href="{{ latest.url | relative_url }}"><strong>{{ latest.title }}</strong></a>
+    <span class="dim">· {{ latest.date | date: "%B %-d, %Y" }}</span>
+    · <a href="{{ '/releases/' | relative_url }}">all releases</a>
+    · <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </p>
+</section>
+{% endif %}
+
+<section class="community">
+  <h2>Get involved</h2>
+  <p>qrcp is built by its community. Every contribution helps, not just code.</p>
+  <ul class="contrib-list">
+    <li><a href="{{ site.github_repo }}" data-goatcounter-click="ext-github-community">Browse the source</a> and star the project</li>
+    <li><a href="{{ site.github_repo }}/issues" data-goatcounter-click="ext-issues">Report a bug or request a feature</a></li>
+    <li><a href="{{ site.github_repo }}/discussions" data-goatcounter-click="ext-discussions">Ask questions and share ideas</a> in Discussions</li>
+    <li>Send a pull request: read the <a href="{{ site.github_repo }}/blob/main/.github/CONTRIBUTING.md" data-goatcounter-click="ext-contributing">contributing guide</a> and <a href="{{ site.github_repo }}/blob/main/.github/CODE_OF_CONDUCT.md">code of conduct</a></li>
+    <li>Package qrcp for your distro, or improve this website</li>
+    <li><a href="https://github.com/sponsors/claudiodangelis" data-goatcounter-click="ext-sponsor">Sponsor the project</a></li>
+  </ul>
+  <p class="dim">News: <a href="https://t.me/qrcp_dev" data-goatcounter-click="ext-telegram">Telegram</a></p>
+</section>

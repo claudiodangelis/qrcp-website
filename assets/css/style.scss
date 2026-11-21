@@ -1,0 +1,201 @@
+---
+---
+
+@import "jekyll-theme-primer";
+
+$accent: #0969da;
+$muted: #57606a;
+$border: #d0d7de;
+$subtle-bg: #f6f8fa;
+
+body { color: #1f2328; }
+
+// ---------- Header / footer ----------
+.site-header {
+  border-bottom: 1px solid $border;
+  background: #fff;
+}
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2328;
+  &:hover { text-decoration: none; }
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  a { color: $muted; }
+  a:hover, a.active { color: #1f2328; text-decoration: none; }
+  a.active { font-weight: 600; }
+}
+.site-footer {
+  border-top: 1px solid $border;
+  padding: 24px 0 40px;
+  color: $muted;
+  font-size: 14px;
+  a { color: $muted; }
+}
+
+// ---------- Buttons ----------
+.btn {
+  display: inline-block;
+  padding: 8px 18px;
+  margin: 4px;
+  font-weight: 600;
+  border: 1px solid $border;
+  border-radius: 6px;
+  background: $subtle-bg;
+  color: #1f2328;
+  &:hover { text-decoration: none; background: #eaeef2; }
+}
+.btn-primary {
+  background: #1f883d;
+  border-color: #1f883d;
+  color: #fff;
+  &:hover { background: #1a7f37; }
+}
+
+// ---------- Generic ----------
+.meta, .dim { color: $muted; }
+.markdown-body .release-list {
+  list-style: none;
+  padding-left: 0;
+  .date { color: $muted; margin-left: 8px; }
+}
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 20px 0;
+  iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+}
+
+// ---------- Landing page ----------
+.markdown-body {
+  .hero {
+    text-align: center;
+    padding: 24px 0 8px;
+    .hero-logo { width: 88px; height: auto; background: none; }
+    .hero-tagline { font-size: 32px; font-weight: 700; line-height: 1.25; margin: 12px auto 8px; max-width: 760px; }
+    .hero-sub { color: $muted; font-size: 18px; }
+  }
+  .hero-term {
+    text-align: left;
+    max-width: 640px;
+    margin: 24px auto;
+    background: #1f2328;
+    color: #e6edf3;
+    white-space: pre-wrap;
+    word-break: break-all;
+    .prompt { color: #3fb950; }
+    .dim { color: #9198a1; }
+    .qr {
+      display: block;
+      width: 100%;
+      max-width: 222px;
+      height: auto;
+      margin: 12px auto 0;
+    }
+  }
+  .cta { margin: 20px 0 8px; }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 48px 0;
+    .feature {
+      border: 1px solid $border;
+      border-radius: 6px;
+      padding: 16px;
+      h3 { margin: 0 0 8px; font-size: 16px; border: 0; }
+      p { margin: 0; color: $muted; }
+    }
+  }
+
+  .steps {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    li + li { margin-top: 0; }
+    .step-n {
+      display: inline-block;
+      width: 26px; height: 26px; line-height: 24px;
+      text-align: center;
+      border: 1px solid $accent;
+      color: $accent;
+      border-radius: 50%;
+      margin-right: 8px;
+      font-weight: 600;
+    }
+  }
+
+  .demos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 48px 0;
+    figure { margin: 0; text-align: center; }
+    img { max-width: 100%; max-height: 420px; border-radius: 6px; }
+    figcaption { color: $muted; margin-top: 8px; }
+  }
+
+  .install-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    h4 { margin: 0 0 4px; }
+    pre { margin: 0; white-space: pre-wrap; word-break: break-all; }
+  }
+}
+
+// ---------- Open source emphasis ----------
+.markdown-body {
+  .oss-badge {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 2px 12px;
+    border: 1px solid #1f883d;
+    border-radius: 999px;
+    color: #1a7f37;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .oss-band {
+    background: $subtle-bg;
+    border: 1px solid $border;
+    border-radius: 6px;
+    padding: 24px;
+    margin: 48px 0;
+    text-align: center;
+    h2 { border: 0; margin-top: 0; }
+    p { max-width: 680px; margin: 0 auto 16px; }
+  }
+  .oss-stats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 32px;
+    color: $muted;
+    li + li { margin-top: 0; }
+    strong { color: #1f2328; font-size: 18px; }
+  }
+}

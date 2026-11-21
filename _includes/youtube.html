@@ -1,0 +1,11 @@
+{% comment %}
+Usage: {% include youtube.html id="VIDEO_ID" title="Video title" %}
+{% endcomment %}
+<div class="video">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ include.id }}"
+          title="{{ include.title | default: 'YouTube video' }}"
+          loading="lazy"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>

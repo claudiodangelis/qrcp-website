@@ -152,6 +152,8 @@ If the phone can't open the URL, run:
 qrcp doctor
 ```
 
+> **Coming in the next release.** `qrcp doctor` is not in v0.11.7 or earlier. To try it now, install the development version with `go install github.com/claudiodangelis/qrcp@main`. With a released version, go straight to the [common causes](#common-causes) below.
+
 It lists the network interfaces, marks the one that looks connected to the local network, and checks the port, the firewall, VPNs, WSL networking and, with `--secure`, the TLS certificate and key. Every problem comes with a suggested fix. Each check is reported as **ok**, **info** (couldn't be fully checked), **warn** (likely to cause problems) or **fail** (transfers won't work until it's fixed).
 
 ```sh
@@ -264,7 +266,7 @@ tls-key: /home/me/certs/key.pem
 | `qrcp receive`                   | `r`           | Receive files (and text) from the phone.                          |
 | `qrcp config`                    | `c`, `cfg`    | Run the configuration wizard.                                     |
 | `qrcp config migrate`            |               | Convert the legacy `config.json` to `config.yml`.                 |
-| `qrcp doctor`                    |               | Check why the phone can't connect.                                |
+| `qrcp doctor`                    |               | Check why the phone can't connect (next release).                 |
 | `qrcp completion <shell>`        |               | Print a completion script for `bash`, `zsh`, `fish` or `powershell`. |
 | `qrcp version`                   |               | Print the version and build information.                          |
 | `qrcp help [command]`            |               | Show help for any command. `-h`/`--help` works too.               |
@@ -297,7 +299,7 @@ Command-specific flags:
 | Command   | Flag                       | Description                                  |
 |-----------|----------------------------|----------------------------------------------|
 | `receive` | `-o`, `--output <dir>`     | Directory where received files are saved.    |
-| `doctor`  | `--json`                   | Print the report as JSON.                    |
+| `doctor`  | `--json`                   | Print the report as JSON (next release).     |
 
 ---
 

@@ -1,7 +1,6 @@
 title: qrcp
 description: Transfer files over wifi from your computer to your mobile device by scanning a QR code without leaving the terminal.
-url: https://qrcp.sh
-baseurl: ""
+# url/baseurl are set by GitHub Pages (github.io subpath now, qrcp.sh after the CNAME cutover).
 theme: jekyll-theme-primer
 
 plugins:
@@ -11,6 +10,8 @@ plugins:
 
 # GoatCounter site code (the "xxx" in xxx.goatcounter.com). Empty = disabled.
 goatcounter: "qrcp"
+# Only count visits on this host (keeps staging/preview URLs out of the stats).
+goatcounter_host: qrcp.sh
 
 github_repo: https://github.com/claudiodangelis/qrcp
 

@@ -23,8 +23,8 @@ nav:
     url: /docs/
   - title: Packages
     url: /packages/
-  - title: Releases
-    url: /releases/
+  - title: News
+    url: /news/
   - title: Tutorials
     url: /tutorials/
 
@@ -38,8 +38,8 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: release
-      category: releases
+      layout: post
+      category: news
       excerpt_separator: "<!--more-->"
 
 exclude:

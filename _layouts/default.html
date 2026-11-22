@@ -23,6 +23,7 @@
             {% unless item.url == '/' %}
               {% assign active = false %}
               {% if page.url contains item.url %}{% assign active = true %}{% endif %}
+              {% if item.url == '/news/' and page.url contains '/releases/' %}{% assign active = true %}{% endif %}
               <a href="{{ item.url | relative_url }}"{% if active %} class="active"{% endif %}>{{ item.title }}</a>
             {% endunless %}
           {% endfor %}

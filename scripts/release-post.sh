@@ -32,6 +32,8 @@ write_post() {
 
   {
     echo "---"
+    echo "layout: release"
+    echo "category: releases"
     jq -r '"title: \((.name // "" | if . == "" then .tagName else . end) // .tagName | tojson)"' <<<"$json"
     jq -r '"version: \(.tagName | tojson)"' <<<"$json"
     jq -r '"date: \(.publishedAt)"' <<<"$json"

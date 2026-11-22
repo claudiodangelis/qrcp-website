@@ -90,17 +90,19 @@ title: qrcp — transfer files over Wi-Fi with a QR code
   <p>Debian, Fedora, Scoop, Chocolatey and prebuilt binaries: <a href="{{ '/packages/' | relative_url }}" data-goatcounter-click="home-all-packages">all packages &rarr;</a></p>
 </section>
 
-{% if latest %}
 <section class="latest">
-  <h2>Latest release</h2>
-  <p>
-    <a href="{{ latest.url | relative_url }}"><strong>{{ latest.title }}</strong></a>
-    <span class="dim">· {{ latest.date | date: "%B %-d, %Y" }}</span>
-    · <a href="{{ '/releases/' | relative_url }}">all releases</a>
-    · <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-  </p>
+  <h2>News</h2>
+  <ul class="news-list">
+  {% for post in site.posts limit:3 %}
+    {% assign is_release = false %}{% if post.categories contains "releases" %}{% assign is_release = true %}{% endif %}
+    <li>
+      <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <a href="{{ post.url | relative_url }}">{% if is_release %}qrcp {% endif %}{{ post.title }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+  <p><a href="{{ '/news/' | relative_url }}" data-goatcounter-click="home-all-news">All news &rarr;</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
 </section>
-{% endif %}
 
 <section class="community">
   <h2>Get involved</h2>

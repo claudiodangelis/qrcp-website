@@ -70,10 +70,23 @@ body { color: #1f2328; }
 
 // ---------- Generic ----------
 .meta, .dim { color: $muted; }
-.markdown-body .release-list {
+.markdown-body .news-list {
   list-style: none;
   padding-left: 0;
-  .date { color: $muted; margin-left: 8px; }
+  li { margin-bottom: 10px; }
+  .date { color: $muted; font-variant-numeric: tabular-nums; margin-right: 8px; }
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 7px;
+    margin-right: 6px;
+    border-radius: 2em;
+    border: 1px solid #1f883d;
+    color: #1a7f37;
+  }
+  .tag-release { border-color: #d0d7de; color: $muted; }
+  .summary { color: $muted; margin-top: 2px; }
 }
 .video {
   position: relative;
